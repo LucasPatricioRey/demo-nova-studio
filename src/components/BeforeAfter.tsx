@@ -1,53 +1,52 @@
-import { useState, type CSSProperties } from 'react'
+import { createWhatsAppUrl } from '../utils/whatsapp'
 
 export function BeforeAfter() {
-  const [split, setSplit] = useState(54)
-
   return (
     <section className="section section-shell before-after-section">
       <div className="section-heading reveal">
         <span className="eyebrow">Transformaciones</span>
         <h2>Antes y después con diagnóstico previo</h2>
         <p>
-          Trabajamos cada cambio con una charla inicial para cuidar el pelo, la piel
-          y el resultado que querés lograr.
+          Una sección visual potente para mostrar resultados concretos y convertir la
+          inspiración en una consulta por WhatsApp.
         </p>
       </div>
 
       <div className="comparison-layout reveal">
-        <div
-          className="comparison-visual"
-          style={{ '--split': `${split}%` } as CSSProperties}
-          role="img"
-          aria-label="Comparación simulada de color y nutrición antes y después"
-        >
-          <div className="comparison-side before">
+        <figure className="comparison-visual">
+          <img
+            src="/images/nova/antes-despues.jpg"
+            alt="Antes y después de coloración y nutrición capilar en NOVA Studio"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
             <span>Antes</span>
-          </div>
-          <div className="comparison-side after">
             <span>Después</span>
-          </div>
-          <div className="comparison-handle" aria-hidden="true" />
-        </div>
+          </figcaption>
+        </figure>
 
         <div className="comparison-copy">
           <span className="badge">Color + nutrición</span>
           <h3>De tono apagado a brillo saludable</h3>
           <p>
             Diagnóstico previo, coloración cálida y sellado nutritivo para recuperar
-            movimiento sin perder naturalidad.
+            movimiento sin perder naturalidad. Ideal para cambios visibles sin perder
+            sofisticación.
           </p>
-          <label className="range-field" htmlFor="comparison-range">
-            Comparar resultado
-            <input
-              id="comparison-range"
-              type="range"
-              min="28"
-              max="72"
-              value={split}
-              onChange={(event) => setSplit(Number(event.target.value))}
-            />
-          </label>
+          <ul className="comparison-points">
+            <li>Evaluación del estado del pelo</li>
+            <li>Coloración cálida con bajo mantenimiento</li>
+            <li>Nutrición final para brillo y suavidad</li>
+          </ul>
+          <a
+            className="button button-primary"
+            href={createWhatsAppUrl('Hola Lucas, vi la transformación de NOVA Studio y quiero una web similar para mi negocio.')}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Quiero un cambio así
+          </a>
         </div>
       </div>
     </section>

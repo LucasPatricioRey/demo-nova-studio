@@ -31,8 +31,8 @@ export function Gallery() {
         <span className="eyebrow">Trabajos recientes</span>
         <h2>Resultados recientes para inspirar tu próximo cambio</h2>
         <p>
-          Una selección de cortes, color, uñas y estética con el estilo urbano y
-          prolijo que buscamos en cada visita.
+          Un portfolio realista de salón: cortes, color, uñas y estética con imágenes
+          grandes, recortes cuidados y detalle de cada servicio.
         </p>
       </div>
 
@@ -50,19 +50,15 @@ export function Gallery() {
       </div>
 
       <div className="gallery-grid">
-        {filteredItems.map((item, index) => (
+        {filteredItems.map((item) => (
           <button
-            className={`gallery-card reveal gallery-${item.palette} ${index === 1 ? 'is-wide' : ''}`}
+            className={`gallery-card reveal ${item.featured ? 'is-featured' : ''}`}
             type="button"
             key={item.id}
             onClick={() => setSelectedItem(item)}
             aria-label={`Ver detalle de ${item.title}`}
           >
-            <span className="gallery-art" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </span>
+            <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
             <span className="gallery-content">
               <small>{item.category}</small>
               <strong>{item.title}</strong>
@@ -89,14 +85,17 @@ export function Gallery() {
             >
               Cerrar
             </button>
-            <div className={`modal-art gallery-${selectedItem.palette}`} aria-hidden="true">
-              <span />
-              <span />
-              <span />
+            <img
+              className="modal-image"
+              src={selectedItem.image}
+              alt={selectedItem.alt}
+              decoding="async"
+            />
+            <div className="modal-body">
+              <span className="badge">{selectedItem.category}</span>
+              <h3 id="gallery-modal-title">{selectedItem.title}</h3>
+              <p>{selectedItem.description}</p>
             </div>
-            <span className="badge">{selectedItem.category}</span>
-            <h3 id="gallery-modal-title">{selectedItem.title}</h3>
-            <p>{selectedItem.description}</p>
           </div>
         </div>
       ) : null}

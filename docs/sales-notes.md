@@ -23,11 +23,15 @@
 - Página responsive completa.
 - Servicios y precios administrados desde código.
 - CTAs a WhatsApp.
-- Galería y trabajos recientes.
+- Galería y trabajos recientes con imágenes demo premium.
 - Promos editables.
 - Ubicación, horarios, redes y FAQ.
 - SEO local básico.
 - Deploy en hosting estático.
+
+## Uso de imágenes demo
+
+Esta versión usa imágenes demo/virtuales premium para que la presentación se sienta más real, editorial y vendible. Para un cliente real, estas imágenes se pueden reemplazar por fotos del local, trabajos realizados, equipo real, fachada, cabinas y productos. Ese reemplazo suele aumentar mucho la confianza porque convierte la web en una vidriera digital propia, no en un template genérico.
 
 ## Upgrades posibles
 

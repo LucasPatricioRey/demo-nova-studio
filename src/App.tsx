@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BeforeAfter } from './components/BeforeAfter'
 import { BookingSimulator } from './components/BookingSimulator'
 import { FAQ } from './components/FAQ'
@@ -14,6 +14,7 @@ import { Team } from './components/Team'
 import { Testimonials } from './components/Testimonials'
 import { TrustBar } from './components/TrustBar'
 import { WhatsAppButton } from './components/WhatsAppButton'
+import { useRevealOnScroll } from './hooks/useRevealOnScroll'
 
 function scrollToSection(sectionId: string) {
   document.querySelector(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -30,31 +31,7 @@ function App() {
     version: 0,
   })
 
-  useEffect(() => {
-    const shouldReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const revealItems = Array.from(document.querySelectorAll<HTMLElement>('.reveal'))
-
-    if (shouldReduceMotion) {
-      revealItems.forEach((item) => item.classList.add('is-visible'))
-      return
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.12 },
-    )
-
-    revealItems.forEach((item) => observer.observe(item))
-
-    return () => observer.disconnect()
-  }, [])
+  useRevealOnScroll()
 
   function startBooking() {
     scrollToSection('#turnos')

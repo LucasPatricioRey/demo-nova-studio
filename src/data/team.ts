@@ -6,6 +6,8 @@ export type Professional = {
   description: string
   badge: string
   rating: string
+  image: string
+  alt: string
 }
 
 export const professionals: Professional[] = [
@@ -17,6 +19,8 @@ export const professionals: Professional[] = [
     description: 'Especialista en coloraciones naturales, corrección de tono y peinados con movimiento.',
     badge: 'Color experto',
     rating: '4.9',
+    image: '/images/nova/martina.jpg',
+    alt: 'Martina, especialista en color y styling de NOVA Studio',
   },
   {
     id: 'nico',
@@ -26,6 +30,8 @@ export const professionals: Professional[] = [
     description: 'Trabaja cortes limpios, fades precisos y barbas con terminación premium.',
     badge: 'Más reservado',
     rating: '5.0',
+    image: '/images/nova/nico.jpg',
+    alt: 'Nico, barbero especializado en cortes y barba',
   },
   {
     id: 'sofia',
@@ -35,6 +41,8 @@ export const professionals: Professional[] = [
     description: 'Cuida cada detalle en esmaltado, perfilado, limpieza facial y protocolos express.',
     badge: 'Detalle fino',
     rating: '4.8',
+    image: '/images/nova/sofia.jpg',
+    alt: 'Sofía, especialista en uñas y estética',
   },
   {
     id: 'leo',
@@ -44,5 +52,7 @@ export const professionals: Professional[] = [
     description: 'Ideal para cambios de look, texturas, capas y cortes urbanos de bajo mantenimiento.',
     badge: 'Tendencia',
     rating: '4.9',
+    image: '/images/nova/leo.jpg',
+    alt: 'Leo, especialista en cortes modernos',
   },
 ]
