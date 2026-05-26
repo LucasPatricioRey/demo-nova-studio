@@ -1,4 +1,4 @@
-export type GalleryCategory = 'Todos' | 'Cortes' | 'Color' | 'Uñas' | 'Estética'
+export type GalleryCategory = 'Todos' | 'Cortes' | 'Barbería' | 'Color' | 'Uñas' | 'Estética'
 
 export type GalleryItem = {
   id: string
@@ -10,7 +10,7 @@ export type GalleryItem = {
   featured?: boolean
 }
 
-export const galleryCategories: GalleryCategory[] = ['Todos', 'Cortes', 'Color', 'Uñas', 'Estética']
+export const galleryCategories: GalleryCategory[] = ['Todos', 'Cortes', 'Barbería', 'Color', 'Uñas', 'Estética']
 
 export const galleryItems: GalleryItem[] = [
   {
@@ -50,7 +50,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'barba-definida',
     title: 'Barba definida',
-    category: 'Cortes',
+    category: 'Barbería',
     description: 'Perfilado con navaja y terminación hidratante.',
     image: '/images/nova/barba-definida.jpg',
     alt: 'Barba definida con perfilado profesional',

@@ -14,13 +14,12 @@ export function Footer() {
     <footer className="site-footer">
       <div>
         <a className="brand footer-brand" href="#inicio">
-          <span className="brand-mark" aria-hidden="true">
-            NS
-          </span>
-          <span>
-            <strong>NOVA Studio</strong>
-            <small>Barbería & Estética Integral</small>
-          </span>
+          <img
+            src="/images/nova/logo-nova-studio.png"
+            alt="NOVA Studio - Barbería y Estética Integral"
+            width="120"
+            height="126"
+          />
         </a>
         <p>Sitio demostrativo para presentación comercial.</p>
         <p>Demo creada por Lucas Rey</p>

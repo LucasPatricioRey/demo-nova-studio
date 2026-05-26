@@ -92,6 +92,13 @@ export function BookingSimulator({ initialServiceId, initialProfessionalId }: Bo
       </div>
 
       <div className="booking-layout reveal">
+        <div className="booking-steps" aria-label="Pasos para reservar">
+          <span>01 Servicio</span>
+          <span>02 Profesional</span>
+          <span>03 Día y hora</span>
+          <span>04 WhatsApp</span>
+        </div>
+
         <div className="booking-panel">
           <div className="field-group">
             <label htmlFor="booking-service">Servicio</label>

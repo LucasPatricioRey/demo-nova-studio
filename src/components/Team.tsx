@@ -23,7 +23,7 @@ export function Team({ onReserveProfessional }: TeamProps) {
               <img
                 src={professional.image}
                 alt={professional.alt}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               />
               <span className="team-rating">★ {professional.rating}</span>

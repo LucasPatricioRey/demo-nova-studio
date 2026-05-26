@@ -6,16 +6,16 @@ type HeroProps = {
 
 const stats = [
   { value: '+850', label: 'clientes atendidos' },
-  { value: '4.9/5', label: 'valoración promedio' },
-  { value: '24 hs', label: 'respuesta por WhatsApp' },
-  { value: 'Palermo', label: 'local a la calle' },
+  { value: '4.9/5', label: 'valoración' },
+  { value: 'WhatsApp', label: 'turnos simples' },
+  { value: 'Palermo', label: 'CABA' },
 ]
 
 export function Hero({ onStartBooking }: HeroProps) {
   return (
     <section className="hero-section section-shell" id="inicio">
       <div className="hero-copy reveal">
-        <span className="eyebrow">Palermo, CABA · Turnos esta semana</span>
+        <span className="eyebrow">Salón boutique en Palermo</span>
         <h1>Barbería y estética integral en Palermo</h1>
         <p className="hero-lead">
           Cortes, color, barba, uñas y tratamientos en un espacio moderno, cómodo y
@@ -50,38 +50,48 @@ export function Hero({ onStartBooking }: HeroProps) {
         </div>
       </div>
 
-      <div className="hero-visual reveal" aria-label="Composición editorial de NOVA Studio">
-        <figure className="hero-photo hero-photo-main">
+      <div className="hero-editorial reveal" aria-label="Composición editorial de NOVA Studio">
+        <figure className="hero-frame hero-frame-main">
           <img
             src="/images/nova/bronde-palermo.jpg"
             alt="Color bronde con ondas en un salón premium"
             fetchPriority="high"
           />
-        </figure>
-        <figure className="hero-photo hero-photo-secondary">
-          <img
-            src="/images/nova/fade-texturizado.jpg"
-            alt="Corte fade texturizado realizado en barbería premium"
-            loading="eager"
-          />
-        </figure>
-        <figure className="hero-photo hero-photo-accent">
-          <img
-            src="/images/nova/semi-nude.jpg"
-            alt="Manicura semi nude prolija y elegante"
-            loading="eager"
-          />
+          <figcaption>
+            <span>Color & styling</span>
+            <strong>Bronde Palermo</strong>
+          </figcaption>
         </figure>
 
-        <div className="hero-ticket hero-ticket-rating">
-          <span aria-hidden="true">★★★★★</span>
-          <strong>4.9</strong>
-          <small>valoración realista</small>
+        <div className="hero-side-stack">
+          <figure className="hero-frame hero-frame-secondary">
+            <img
+              src="/images/nova/fade-texturizado.jpg"
+              alt="Corte fade texturizado realizado en barbería premium"
+              loading="eager"
+            />
+            <figcaption>
+              <span>Barbería</span>
+              <strong>Fade texturizado</strong>
+            </figcaption>
+          </figure>
+          <figure className="hero-frame hero-frame-accent">
+            <img
+              src="/images/nova/semi-nude.jpg"
+              alt="Manicura semi nude prolija y elegante"
+              loading="eager"
+            />
+            <figcaption>
+              <span>Uñas</span>
+              <strong>Semi nude</strong>
+            </figcaption>
+          </figure>
         </div>
-        <div className="hero-ticket hero-ticket-booking">
-          <small>Próximo turno</small>
+
+        <div className="hero-availability-card">
+          <span>Próximo turno</span>
           <strong>Hoy 17:30</strong>
-          <span>Corte + barba</span>
+          <small>Corte + barba · Nico</small>
         </div>
       </div>
     </section>

@@ -13,26 +13,13 @@ export function BeforeAfter() {
       </div>
 
       <div className="comparison-layout reveal">
-        <figure className="comparison-visual">
-          <img
-            src="/images/nova/antes-despues.jpg"
-            alt="Antes y después de coloración y nutrición capilar en NOVA Studio"
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption>
-            <span>Antes</span>
-            <span>Después</span>
-          </figcaption>
-        </figure>
-
         <div className="comparison-copy">
           <span className="badge">Color + nutrición</span>
-          <h3>De tono apagado a brillo saludable</h3>
+          <h3>Un cambio visible, cuidado y fácil de mantener</h3>
           <p>
             Diagnóstico previo, coloración cálida y sellado nutritivo para recuperar
-            movimiento sin perder naturalidad. Ideal para cambios visibles sin perder
-            sofisticación.
+            movimiento sin perder naturalidad. Una transformación pensada para verse
+            sofisticada desde el primer día.
           </p>
           <ul className="comparison-points">
             <li>Evaluación del estado del pelo</li>
@@ -48,6 +35,19 @@ export function BeforeAfter() {
             Quiero un cambio así
           </a>
         </div>
+
+        <figure className="comparison-visual">
+          <img
+            src="/images/nova/antes-despues.jpg"
+            alt="Antes y después de coloración y nutrición capilar en NOVA Studio"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            <span>Antes</span>
+            <span>Después</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
   )

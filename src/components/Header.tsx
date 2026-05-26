@@ -38,13 +38,12 @@ export function Header() {
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <a className="brand" href="#inicio" aria-label="Ir al inicio de NOVA Studio">
-        <span className="brand-mark" aria-hidden="true">
-          NS
-        </span>
-        <span>
-          <strong>NOVA Studio</strong>
-          <small>Barbería & Estética Integral</small>
-        </span>
+        <img
+          src="/images/nova/logo-nova-studio.png"
+          alt="NOVA Studio - Barbería y Estética Integral"
+          width="120"
+          height="126"
+        />
       </a>
 
       <button

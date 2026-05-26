@@ -36,10 +36,10 @@ export function FAQ() {
               </button>
               <div
                 id={panelId}
-                className="faq-answer"
+                className={`faq-answer ${isOpen ? 'is-open' : ''}`}
                 role="region"
                 aria-labelledby={buttonId}
-                hidden={!isOpen}
+                aria-hidden={!isOpen}
               >
                 <p>{item.answer}</p>
               </div>

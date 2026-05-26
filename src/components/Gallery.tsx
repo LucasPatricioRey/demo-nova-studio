@@ -53,6 +53,7 @@ export function Gallery() {
         {filteredItems.map((item) => (
           <button
             className={`gallery-card reveal ${item.featured ? 'is-featured' : ''}`}
+            data-gallery-id={item.id}
             type="button"
             key={item.id}
             onClick={() => setSelectedItem(item)}

@@ -41,11 +41,11 @@ export function Services({ onReserve }: ServicesProps) {
       </div>
 
       <div className="services-grid">
-        {filteredServices.map((service) => (
+        {filteredServices.map((service, index) => (
           <article className={`service-card reveal ${service.highlight ? 'is-highlighted' : ''}`} key={service.id}>
             <div className="card-topline">
               <span className="badge">{service.category}</span>
-              <span>{service.duration}</span>
+              <span>{String(index + 1).padStart(2, '0')} · {service.duration}</span>
             </div>
             <h3>{service.name}</h3>
             <p>{service.description}</p>

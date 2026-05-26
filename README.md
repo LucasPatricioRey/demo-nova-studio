@@ -21,7 +21,9 @@ Se eligió este stack porque permite una demo rápida, liviana, fácil de manten
 ## Funcionalidades
 
 - Header sticky con menú mobile.
-- Hero editorial con composición fotográfica, CTAs y elementos de confianza.
+- Identidad visual premium en blanco, negro y grises, con estética editorial/fashion.
+- Logo demo integrado en header y footer.
+- Hero editorial con composición fotográfica protagonista, CTAs y elementos de confianza.
 - Beneficios del local.
 - Servicios con filtros por categoría.
 - Simulador de turnos con selección de servicio, profesional, día y horario.
@@ -36,6 +38,7 @@ Se eligió este stack porque permite una demo rápida, liviana, fácil de manten
 - FAQ accesible con acordeón.
 - Botón flotante premium con ícono de WhatsApp.
 - Animaciones suaves de hero, cards, filtros, FAQ, botón flotante y reveal on scroll.
+- Capturas de verificación visual en `docs/screenshots/`.
 - SEO básico, Open Graph y favicon.
 
 ## Cómo correr localmente
@@ -62,7 +65,7 @@ npm run preview
 1. Cambiar nombre, dirección, horarios, WhatsApp e Instagram.
 2. Reemplazar servicios, precios y duración por la carta real del negocio.
 3. Reemplazar las imágenes demo por fotos reales de trabajos, equipo y local.
-4. Ajustar colores y tono de marca.
+4. Ajustar identidad visual, logo, colores y tono de marca.
 5. Conectar los CTAs al WhatsApp del negocio.
 6. Si el cliente lo necesita, reemplazar el simulador por un sistema real de reservas.
 
@@ -72,8 +75,19 @@ npm run preview
 - Los profesionales, opiniones, promociones, precios y horarios son ficticios.
 - El simulador de turnos no guarda datos ni consulta disponibilidad real.
 - Las imágenes son assets demo/virtuales optimizados para presentación comercial.
+- El logo de NOVA Studio es un asset demo y puede reemplazarse por el logo real del cliente.
 - El mapa es una composición visual propia, no un mapa real.
 - Los CTAs usan el WhatsApp real de Lucas Rey para fines comerciales.
+
+## Capturas de verificación
+
+Las capturas generadas para revisar el rediseño están en:
+
+- `docs/screenshots/home-desktop.png`
+- `docs/screenshots/home-mobile.png`
+- `docs/screenshots/servicios.png`
+- `docs/screenshots/galeria.png`
+- `docs/screenshots/equipo.png`
 
 ## Nota
 
