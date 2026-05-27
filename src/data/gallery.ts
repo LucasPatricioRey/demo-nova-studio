@@ -7,7 +7,6 @@ export type GalleryItem = {
   description: string
   image: string
   alt: string
-  featured?: boolean
 }
 
 export const galleryCategories: GalleryCategory[] = ['Todos', 'Cortes', 'Barbería', 'Color', 'Uñas', 'Estética']
@@ -20,7 +19,6 @@ export const galleryItems: GalleryItem[] = [
     description: 'Laterales prolijos, textura arriba y acabado mate.',
     image: '/images/nova/fade-texturizado.jpg',
     alt: 'Corte fade texturizado en barbería premium',
-    featured: true,
   },
   {
     id: 'bob-iluminado',
@@ -45,7 +43,6 @@ export const galleryItems: GalleryItem[] = [
     description: 'Rutina express para piel fresca y luminosa.',
     image: '/images/nova/limpieza-glow.jpg',
     alt: 'Limpieza facial glow en cabina de estética cálida',
-    featured: true,
   },
   {
     id: 'barba-definida',
@@ -62,6 +59,5 @@ export const galleryItems: GalleryItem[] = [
     description: 'Mezcla cálida de rubios y castaños con bajo mantenimiento.',
     image: '/images/nova/bronde-palermo.jpg',
     alt: 'Color bronde Palermo con ondas y brillo de salón',
-    featured: true,
   },
 ]
