@@ -37,47 +37,51 @@ export function Header() {
 
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#inicio" aria-label="Ir al inicio de NOVA Studio">
-        <img
-          src="/images/nova/logo-nova-studio.png"
-          alt="NOVA Studio - Barbería y Estética Integral"
-          width="120"
-          height="126"
-        />
-      </a>
-
-      <button
-        className="nav-toggle"
-        type="button"
-        aria-label="Abrir menú de navegación"
-        aria-expanded={isMenuOpen}
-        aria-controls="primary-navigation"
-        onClick={() => setIsMenuOpen((current) => !current)}
-      >
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-      </button>
-
-      <nav
-        id="primary-navigation"
-        className={`primary-nav ${isMenuOpen ? 'is-open' : ''}`}
-        aria-label="Navegación principal"
-      >
-        {navItems.map((item) => (
-          <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)}>
-            {item.label}
-          </a>
-        ))}
-        <a
-          className="button button-small button-primary nav-cta"
-          href={createWhatsAppUrl(whatsappMessages.demoSimilar)}
-          target="_blank"
-          rel="noreferrer"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Reservar por WhatsApp
+      <div className="nav-inner">
+        <a className="brand" href="#inicio" aria-label="Ir al inicio de NOVA Studio">
+          <img
+            src="/images/nova/logo-nova-studio.png"
+            alt="NOVA Studio - Barbería y Estética Integral"
+            width="120"
+            height="126"
+          />
         </a>
-      </nav>
+
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
+
+        <nav
+          id="primary-navigation"
+          className={`primary-nav ${isMenuOpen ? 'is-open' : ''}`}
+          aria-label="Navegación principal"
+        >
+          <div className="nav-links">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)}>
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <a
+            className="button button-small button-primary nav-cta"
+            href={createWhatsAppUrl(whatsappMessages.demoSimilar)}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Reservar por WhatsApp
+          </a>
+        </nav>
+      </div>
     </header>
   )
 }

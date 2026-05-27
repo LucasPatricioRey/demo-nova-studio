@@ -50,45 +50,19 @@ export function Hero({ onStartBooking }: HeroProps) {
         </div>
       </div>
 
-      <div className="hero-editorial reveal" aria-label="Composición editorial de NOVA Studio">
-        <figure className="hero-frame hero-frame-main">
+      <div className="hero-media reveal" aria-label="Trabajo destacado de NOVA Studio">
+        <figure className="hero-image-card">
           <img
             src="/images/nova/bronde-palermo.jpg"
             alt="Color bronde con ondas en un salón premium"
             fetchPriority="high"
           />
           <figcaption>
-            <span>Color & styling</span>
-            <strong>Bronde Palermo</strong>
+            <span>Color & styling · Bronde Palermo</span>
           </figcaption>
         </figure>
 
-        <div className="hero-side-stack">
-          <figure className="hero-frame hero-frame-secondary">
-            <img
-              src="/images/nova/fade-texturizado.jpg"
-              alt="Corte fade texturizado realizado en barbería premium"
-              loading="eager"
-            />
-            <figcaption>
-              <span>Barbería</span>
-              <strong>Fade texturizado</strong>
-            </figcaption>
-          </figure>
-          <figure className="hero-frame hero-frame-accent">
-            <img
-              src="/images/nova/semi-nude.jpg"
-              alt="Manicura semi nude prolija y elegante"
-              loading="eager"
-            />
-            <figcaption>
-              <span>Uñas</span>
-              <strong>Semi nude</strong>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div className="hero-availability-card">
+        <div className="hero-floating-card">
           <span>Próximo turno</span>
           <strong>Hoy 17:30</strong>
           <small>Corte + barba · Nico</small>
